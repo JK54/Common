@@ -1,0 +1,11 @@
+exe testbjam
+	: main.cpp
+	  ../lib/boost//libboosttest 
+	  ../lib/others//libmymath
+	: <define>USE_MYMATH
+	;
+
+install dist
+	: testbjam
+	: <location>..
+	;

@@ -1,0 +1,19 @@
+desktop environment:
+0.for ubuntu dual gpu(run in terminal directly) : ubuntu-drivers devices;sudo ubuntu-drivers autoinstall
+	p.s.:far more diffcult for other linux distro.
+1.onedrive
+2.shadowsocks-libev + haproxy(load balancing) + keppalived(heartbeat detect) + genpac(generate pac file,optional)
+2.1.replace apt repo + setup snapd proxy("/etc/environment",add http_proxy & https_proxy,no export keyword)
+3.chrome,tampermonkey,chrome-gnome-shell + bing wallpaper changer
+4.netease-cloud-music,vlc,calibre,gnucash,keepass,seahorse + seahorse-nautilus
+5.virtualbox + win10 + onenote(will be removed after transfer onenote to markdown)
+6.rime(ibus or fcitix)
+
+work environment:
+0.clang,gcc,make,cmake,autoconf,
+1.vim(with python3 supported),ycm,tmux,emacs(not sure about that)
+2.boost
+3.vscode
+4.universal-ctags,gtags,cscope,add support for vim
+5.muduo,zeromq
+6.mysql,redis

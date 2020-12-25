@@ -1,0 +1,4 @@
+lib libmymath
+	: fast_pow.cpp
+	: <link>static
+	;

@@ -1,0 +1,5 @@
+FROM ubuntu
+RUN apt update -y && apt upgrade -y && apt install init -y && apt install wget -y
+RUN wget https://dl-cdn.oray.com/hsk/linux/phddns-5.0.0-amd64.deb && dpkg -i phddns-5.0.0-amd64.deb
+EXPOSE 80 6060 6061 6064 6060/udp 33758
+CMD ["/usr/sbin/init"]

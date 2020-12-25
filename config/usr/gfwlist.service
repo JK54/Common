@@ -1,0 +1,11 @@
+[Unit]
+Description=GFWLIST
+After=network.target remote-fs.target nss-lookup.target
+
+[Service]
+ExecStart=/home/jk54/Inventory/Common/tool/bin/gfwlist2privoxy.sh
+Type=oneshot
+TimeoutSec=0
+
+[Install]
+WantedBy=multi-user.target

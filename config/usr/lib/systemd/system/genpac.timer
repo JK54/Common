@@ -1,0 +1,10 @@
+[Unit]
+Description=timer for genpac.service
+
+[Timer]
+OnBootSec=5min
+OnUnitActiveSec=1w
+Unit=genpac.service
+
+[Install]
+WantedBy=multi-user.target

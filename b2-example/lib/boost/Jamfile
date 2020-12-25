@@ -1,0 +1,31 @@
+import os ;
+BOOST_PATH = [ os.environ BOOST_PATH ] ;
+
+BOOSTLIB = boost_filesystem boost_date_time boost_regex boost_program_options ;
+SYSLIB = rt pthread ;
+
+lib	libboosttest
+	: boost_test.cpp
+	  program_options.cpp
+	  tcp_async_server.cpp
+	  boost_filesystem
+	  boost_date_time
+	  boost_regex
+	  boost_program_options
+	  rt
+	  pthread
+	: <link>shared
+	  <include>$(BOOST_PATH)include
+	;
+
+install libdir
+	: libboosttest 
+	: <location>/usr/local/lib ; 
+
+lib boost_filesystem : : <name>boost_filesystem : <search>$(BOOST_PATH)lib ;
+lib boost_date_time : : <name>boost_date_time : <search>$(BOOST_PATH)lib ;
+lib boost_regex : : <name>boost_regex : <search>$(BOOST_PATH)lib ;
+lib boost_program_options : : <name>boost_program_options : <search>$(BOOST_PATH)lib ;
+lib rt : : <name>rt ;
+lib pthread : : <name>pthread ;
+

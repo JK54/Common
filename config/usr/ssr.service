@@ -1,0 +1,11 @@
+[Unit]
+Description=SSR
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/ssr start
+KillMode=process
+Type=simple
+
+[Install]
+WantedBy=multi-user.target
